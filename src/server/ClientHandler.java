@@ -66,13 +66,13 @@ public class ClientHandler {
                                     String[] tokens = str.split(" ",3);
                                     server.sendPersonalMsg(ClientHandler.this, tokens[1], tokens[2]);
                                 }
-                                if (str.startsWith("/blacklist ")) {
+                                if (str.startsWith("/blacklist ")) {//добавить в чёрный список;
                                     String[] tokens = str.split(" ");
                                     int Id = AuthService.getIdByNick(tokens[1]);
                                     AuthService.addBlockedList(ClientHandler.this.getId(), Id); 
                                     sendMsg("Вы добавили пользователя " + tokens[1] + " в черный список");
                                 }
-                                if (str.startsWith("/delblack ")) {
+                                if (str.startsWith("/delblack ")) {//удаление из черного списка
                                     String[] tokens = str.split(" ");
                                     int Id = AuthService.getIdByNick(tokens[1]);
                                     AuthService.removeBlockedList(ClientHandler.this.getId(), Id); // добавить id для удаления;

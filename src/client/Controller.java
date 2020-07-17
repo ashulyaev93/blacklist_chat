@@ -16,8 +16,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-
+//здесь должен быть код клиента, но выходит исключение
 public class Controller {
     @FXML
     TextArea textArea;
